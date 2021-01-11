@@ -1,0 +1,57 @@
+{
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Dracula Soft",
+  "workbench.iconTheme": "material-icon-theme",
+   "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[javascript]": {
+      "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+    },
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 0,
+  "material-icon-theme.folders.associations": {
+    "widgets": "components",
+    "front-react": "React-Components",
+    "store": "Redux-store",
+    "actions": "redux-actions",
+    "reducers": "redux-reducer",
+    "repositories": "constant",
+    "migrations": "controller"
+  },
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.files.associations": {
+
+
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[php]": {
+    "editor.detectIndentation": true,
+    "editor.useTabStops": true,
+    "editor.formatOnSave": false,
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "rifi2k.format-html-in-php"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "eslint.codeAction.showDocumentation": {
+
+    "enable": true
+  },
+  "eslint.format.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onSave",
+}

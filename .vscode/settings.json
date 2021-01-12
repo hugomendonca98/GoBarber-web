@@ -54,4 +54,7 @@
   "eslint.format.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.run": "onSave",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true
 }

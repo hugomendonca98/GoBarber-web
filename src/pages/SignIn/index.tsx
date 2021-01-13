@@ -6,7 +6,8 @@ import * as Yup from 'yup';
 
 import getValidationErros from '../../utils/getValidationErros';
 
-import { useAth } from '../../hooks/AuthContext';
+import { useAth } from '../../hooks/auth';
+import { useToast } from '../../hooks/toast';
 import { Container, Content, Background } from './styles';
 import logo from '../../assets/logo.svg';
 
@@ -22,6 +23,7 @@ const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
   const { signIn } = useAth();
+  const { addToast } = useToast();
 
   const handleSubmit = useCallback(
     async (data: SignInFormData) => {
@@ -39,7 +41,7 @@ const SignIn: React.FC = () => {
           abortEarly: false,
         });
 
-        signIn({
+        await signIn({
           email: data.email,
           password: data.password,
         });
@@ -50,10 +52,10 @@ const SignIn: React.FC = () => {
           formRef.current?.setErrors(errors);
         }
 
-        // disparar toast
+        addToast();
       }
     },
-    [signIn],
+    [addToast, signIn],
   );
 
   return (

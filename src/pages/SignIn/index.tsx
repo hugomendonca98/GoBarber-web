@@ -52,7 +52,11 @@ const SignIn: React.FC = () => {
           formRef.current?.setErrors(errors);
         }
 
-        addToast();
+        addToast({
+          type: 'info',
+          title: 'Ocorreu um erro!',
+          description: 'Não foi possivel fazer login na aplicação.',
+        });
       }
     },
     [addToast, signIn],

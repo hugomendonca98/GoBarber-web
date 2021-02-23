@@ -4,7 +4,7 @@ import { animated } from 'react-spring';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface ContainerProps {
   type?: 'success' | 'error' | 'info';
-  hasDescription: boolean;
+  hasDescription: number;
 }
 
 const toastTypeVariations = {

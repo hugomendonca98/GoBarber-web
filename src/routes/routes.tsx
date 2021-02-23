@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  Redirect,
   Route as ReactDOMRoute,
-  RouteProps as ReactDOMRouterProps,
+  RouteProps as ReactDOMRouteProps,
+  Redirect,
 } from 'react-router-dom';
 
-import { useAth } from '../hooks/auth';
+import { useAuth } from '../hooks/auth';
 
-interface RouteProps extends ReactDOMRouterProps {
+interface RouteProps extends ReactDOMRouteProps {
   isPrivate?: boolean;
   component: React.ComponentType;
 }
@@ -17,7 +17,7 @@ const Route: React.FC<RouteProps> = ({
   component: Component,
   ...rest
 }) => {
-  const { user } = useAth();
+  const { user } = useAuth();
 
   return (
     <ReactDOMRoute

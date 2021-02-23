@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import { Link, useHistory } from 'react-router-dom';
 import getValidationErros from '../../utils/getValidationErros';
 
-import { useAth } from '../../hooks/auth';
+import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
 import { Container, Content, AnimationContainer, Background } from './styles';
 import logo from '../../assets/logo.svg';
@@ -23,7 +23,7 @@ interface SignInFormData {
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const { signIn } = useAth();
+  const { signIn } = useAuth();
   const { addToast } = useToast();
 
   const history = useHistory();

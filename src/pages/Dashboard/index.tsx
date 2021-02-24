@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FiClock, FiPower } from 'react-icons/fi';
 import {
@@ -10,12 +10,16 @@ import {
   Schedule,
   Calendar,
   NextAppoitment,
+  Section,
+  Appointment,
 } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
 
   return (
@@ -62,6 +66,55 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppoitment>
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars.githubusercontent.com/u/47926683?s=460&u=aa9acbd1f1b07234a7a7afbe742769a729bd1038&v=4"
+                  alt="Hugo Mendonça"
+                />
+
+                <strong>Hugo Mendonça</strong>
+              </div>
+            </Appointment>
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars.githubusercontent.com/u/47926683?s=460&u=aa9acbd1f1b07234a7a7afbe742769a729bd1038&v=4"
+                  alt="Hugo Mendonça"
+                />
+
+                <strong>Hugo Mendonça</strong>
+              </div>
+            </Appointment>
+          </Section>
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars.githubusercontent.com/u/47926683?s=460&u=aa9acbd1f1b07234a7a7afbe742769a729bd1038&v=4"
+                  alt="Hugo Mendonça"
+                />
+                <strong>Hugo Mendonça</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
         <Calendar />
       </Content>

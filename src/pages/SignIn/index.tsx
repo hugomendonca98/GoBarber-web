@@ -1,4 +1,5 @@
 import React, { useRef, useCallback } from 'react';
+
 import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
@@ -61,8 +62,8 @@ const SignIn: React.FC = () => {
 
         addToast({
           type: 'error',
-          title: 'Erro no cadastro!',
-          description: 'Ocorreu um erro ao fazer o cadastro, tente novamente.',
+          title: 'Erro no Login!',
+          description: 'Ocorreu um erro ao fazer login, tente novamente.',
         });
       }
     },
